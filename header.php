@@ -50,7 +50,8 @@
 
   <!-- Overall header output format -->
   <div class="topnav">
-    <a class="active" id="buttonHome" href="./productList.php"><img src="./images/logo.png" style="width:100px;margin-left:-7px;margin-top:-7px;margin-bottom:-7px;"></img></a>
+    <a class="active" id="buttonHome" href="./home.php"><img src="./images/logo.png" style="width:100px;margin-left:-7px;margin-top:-7px;margin-bottom:-7px;"></img></a>
+    <a class="active" id="buttonProductList" href="./productList.php" style="margin-right:20px;font-family:Tahoma;letter-spacing:1px;">Product List</a>
     <a id="buttonCart" href="./cart.php" style="font-family:Tahoma;letter-spacing:1px;">Cart</a>
      <a id="buttonWishlist" href="./wishlist.php" style="font-family:Tahoma;letter-spacing:1px;">Wishlist</a>
     <a id="buttonOrderHistory" href="./orderHistory.php" style="font-family:Tahoma;letter-spacing:1px;">Orders</a>
