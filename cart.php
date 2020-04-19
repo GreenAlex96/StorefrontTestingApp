@@ -23,9 +23,7 @@
 	$statement->execute();
 	$result = $statement->fetchAll();
 	$total_row = $statement->rowCount();
-
-	// Check if there is a store-wide discount currently set on the order
-	$discount = $result[0]['discount'];
+	$discount =  0;
 
 	/*no incomplete order therefore no cart*/
 	if ($total_row == 0) {
@@ -33,6 +31,8 @@
 	} else if ($total_row >= 2) { /*multiple incomplete orders found so something went wrong and needs server admin to fix*/
 		echo "<p id='errorcart'> Error: Multiple incomplete orders detected </p>";
 	} else {
+		// Check if there is a store-wide discount currently set on the order
+		$discount = $result[0]['discount'];
 		$oID = $result[0]['id'];
 		/*query sql database to get all the order items*/
 		$query = "SELECT * FROM order_products, product WHERE pid=id AND oid=$oID";
@@ -78,7 +78,7 @@
 			$subtotal += ($price * $quantity);
 		};
 		echo "</div>";
-		
+
 		// Apply discount
 		$subtotal *= (100 - $discount) / 100;
 		/*display subtotal, tax, and total*/
@@ -89,8 +89,7 @@
 		echo number_format($tax, 2) . '</p>';
 		if ($discount != 0) {
 			echo '<p style="text-align: right; margin: 10px;" id="carttotal"> Total with ' . $discount . '% off: $';
-		}
-		else {
+		} else {
 			echo '<p style="text-align: right; margin: 10px;" id="carttotal"> Total: $';
 		}
 		$total = $subtotal + $tax;
