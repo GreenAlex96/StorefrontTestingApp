@@ -67,7 +67,7 @@
 		if ($discount != 0) {
 			echo "<p id='checkoutsubtotal'>Subtotal = $$f_subtotal after $$discount% discount.</p>";
 		} else {
-			echo "<p id='checkoutsubtotal'>Subtotal = $$f_subtotal </p>";
+      echo "<p id='checkoutsubtotal'>Subtotal = $$f_subtotal </p>";
 		}
 		echo "<p id='checkouttax'>Tax = $$f_tax </p>";
 		echo "<p id='checkouttotal'>Total = $$f_total </p>";
@@ -75,154 +75,153 @@
 		echo '</div>';
 	};
 	?>
-	<!-- billing infomation form -->
-	Billing Information:<br>
-	First name:
-	<input type="text" name="firstname" id="checkoutbillfname"><br>
-	Last name:
-	<input type="text" name="lastname" id="checkoutbilllname"><br>
-	Address:
-	<input type="text" name="address" id="checkoutbilladdress"><br>
-	City:
-	<input type="text" name="city" id="checkoutbillcity"><br>
-	State:
-	<select name="state" id="checkoutbillstate">
-		<option value="AL">Alabama</option>
-		<option value="AK">Alaska</option>
-		<option value="AZ">Arizona</option>
-		<option value="AR">Arkansas</option>
-		<option value="CA">California</option>
-		<option value="CO">Colorado</option>
-		<option value="CT">Connecticut</option>
-		<option value="DE">Delaware</option>
-		<option value="DC">District Of Columbia</option>
-		<option value="FL">Florida</option>
-		<option value="GA">Georgia</option>
-		<option value="HI">Hawaii</option>
-		<option value="ID">Idaho</option>
-		<option value="IL">Illinois</option>
-		<option value="IN">Indiana</option>
-		<option value="IA">Iowa</option>
-		<option value="KS">Kansas</option>
-		<option value="KY">Kentucky</option>
-		<option value="LA">Louisiana</option>
-		<option value="ME">Maine</option>
-		<option value="MD">Maryland</option>
-		<option value="MA">Massachusetts</option>
-		<option value="MI">Michigan</option>
-		<option value="MN">Minnesota</option>
-		<option value="MS">Mississippi</option>
-		<option value="MO">Missouri</option>
-		<option value="MT">Montana</option>
-		<option value="NE">Nebraska</option>
-		<option value="NV">Nevada</option>
-		<option value="NH">New Hampshire</option>
-		<option value="NJ">New Jersey</option>
-		<option value="NM">New Mexico</option>
-		<option value="NY">New York</option>
-		<option value="NC">North Carolina</option>
-		<option value="ND">North Dakota</option>
-		<option value="OH">Ohio</option>
-		<option value="OK">Oklahoma</option>
-		<option value="OR">Oregon</option>
-		<option value="PA">Pennsylvania</option>
-		<option value="RI">Rhode Island</option>
-		<option value="SC">South Carolina</option>
-		<option value="SD">South Dakota</option>
-		<option value="TN">Tennessee</option>
-		<option value="TX">Texas</option>
-		<option value="UT">Utah</option>
-		<option value="VT">Vermont</option>
-		<option value="VA">Virginia</option>
-		<option value="WA">Washington</option>
-		<option value="WV">West Virginia</option>
-		<option value="WI">Wisconsin</option>
-		<option value="WY">Wyoming</option>
-	</select><br>
-	Zip:
-	<input type="text" name="zip" id="checkoutbillzip"><br>
-	<!-- payment infomation form -->
-	Payment type:
-	<input type="radio" name="payment" value="credit" checked id="checkoutbillcredit"> Credit
-	<input type="radio" name="payment" value="debit" id="checkoutbilldebit"> Debit<br>
-	Card Number:
-	<input type="text" name="creditcard" id="checkoutbillcard"><br>
-	Expiration Date:
-	<span class="expiration" id="checkoutbillexpiration">
-		<input type="text" name="month" placeholder="MM" maxlength="2" size="2" id="checkoutbillmonth">
-		<span>/</span>
-		<input type="text" name="year" placeholder="YY" maxlength="2" size="2" id="checkoutbillyear">
-	</span><br>
+  <!-- billing infomation form -->
+  <div style="margin-left:10px;"><h3 style="width:20%;">Billing Information:</h3>
+  <div style="height:5px;">First Name:
+  <input type="text" name="creditcard" id="checkoutbillcard" style="position:absolute;margin-left:36px;width:150px;"></div><br>
+  <div style="height:5px;">Last Name:
+  <input type="text" name="creditcard" id="checkoutbillcard" style="position:absolute;margin-left:37px;width:150px;"></div><br>
+  <div style="height:5px;">Address:
+  <input type="text" name="creditcard" id="checkoutbillcard" style="position:absolute;margin-left:56px;width:150px;"></div><br>
+  <div style="height:5px;">City:
+  <input type="text" name="creditcard" id="checkoutbillcard" style="position:absolute;margin-left:87px;width:150px;"></div><br>
+  <div style="height:5px;">State:
+  <select name="shipstate" id="checkoutshipstate" style="position:absolute;margin-left:77px;width:154px;">
+    <option value="AL">Alabama</option>
+    <option value="AK">Alaska</option>
+    <option value="AZ">Arizona</option>
+    <option value="AR">Arkansas</option>
+    <option value="CA">California</option>
+    <option value="CO">Colorado</option>
+    <option value="CT">Connecticut</option>
+    <option value="DE">Delaware</option>
+    <option value="DC">District Of Columbia</option>
+    <option value="FL">Florida</option>
+    <option value="GA">Georgia</option>
+    <option value="HI">Hawaii</option>
+    <option value="ID">Idaho</option>
+    <option value="IL">Illinois</option>
+    <option value="IN">Indiana</option>
+    <option value="IA">Iowa</option>
+    <option value="KS">Kansas</option>
+    <option value="KY">Kentucky</option>
+    <option value="LA">Louisiana</option>
+    <option value="ME">Maine</option>
+    <option value="MD">Maryland</option>
+    <option value="MA">Massachusetts</option>
+    <option value="MI">Michigan</option>
+    <option value="MN">Minnesota</option>
+    <option value="MS">Mississippi</option>
+    <option value="MO">Missouri</option>
+    <option value="MT">Montana</option>
+    <option value="NE">Nebraska</option>
+    <option value="NV">Nevada</option>
+    <option value="NH">New Hampshire</option>
+    <option value="NJ">New Jersey</option>
+    <option value="NM">New Mexico</option>
+    <option value="NY">New York</option>
+    <option value="NC">North Carolina</option>
+    <option value="ND">North Dakota</option>
+    <option value="OH">Ohio</option>
+    <option value="OK">Oklahoma</option>
+    <option value="OR">Oregon</option>
+    <option value="PA">Pennsylvania</option>
+    <option value="RI">Rhode Island</option>
+    <option value="SC">South Carolina</option>
+    <option value="SD">South Dakota</option>
+    <option value="TN">Tennessee</option>
+    <option value="TX">Texas</option>
+    <option value="UT">Utah</option>
+    <option value="VT">Vermont</option>
+    <option value="VA">Virginia</option>
+    <option value="WA">Washington</option>
+    <option value="WV">West Virginia</option>
+    <option value="WI">Wisconsin</option>
+    <option value="WY">Wyoming</option>
+  </select></div><br>
+  <div style="height:5px;">Zip:
+  <input type="text" name="creditcard" id="checkoutbillcard" style="position:absolute;margin-left:92px;width:150px;"></div><br><br>
+  <!-- payment infomation form -->
+  <h3 style="width:20%;">Payment type:</h3>
+  <input type="radio" name="payment" value="credit" checked id="checkoutbillcredit"> Credit 
+  <input type="radio" name="payment" value="debit" id="checkoutbilldebit"> Debit<br>
+  <div style="height:5px;">Card Number:
+  <input type="text" name="creditcard" id="checkoutbillcard" style="position:absolute;margin-left:19px;width:150px;"></div><br>
+  <div style="height:5px;">Expiration Date:
+  <span class="expiration" id="checkoutbillexpiration">
+    <input type="text" name="month" placeholder="MM" maxlength="2" size="2" id="checkoutbillmonth" style="position:absolute;margin-left:5px;width:65px;">
+    <span style="position:absolute;margin-left:80px;">/</span>
+    <input type="text" name="year" placeholder="YY" maxlength="2" size="2" id="checkoutbillyear" style="position:absolute;margin-left:90px;width:65px;">
+  </span></div><br>
 
-	Security Code:
-	<input type="text" name="security" maxlength="3" id="checkoutbillseccode"><br>
+  <div style="height:5px;">Security Code:
+  <input type="text" name="security" maxlength="3" id="checkoutbillseccode" style="position:absolute;margin-left:14px;width:150px;"></div><br><br>
 
-	<!-- shipping infomation form -->
-	Shipping Information:<br>
-	First name:
-	<input type="text" name="shipfirstname" id="checkoutshipfname"><br>
-	Last name:
-	<input type="text" name="shiplastname" id="checkoutshiplname"><br>
-	Address:
-	<input type="text" name="shipaddress" id="checkoutshipaddress"><br>
-	City:
-	<input type="text" name="shipcity" id="checkoutshipcity"><br>
-	State:
-	<select name="shipstate" id="checkoutshipstate">
-		<option value="AL">Alabama</option>
-		<option value="AK">Alaska</option>
-		<option value="AZ">Arizona</option>
-		<option value="AR">Arkansas</option>
-		<option value="CA">California</option>
-		<option value="CO">Colorado</option>
-		<option value="CT">Connecticut</option>
-		<option value="DE">Delaware</option>
-		<option value="DC">District Of Columbia</option>
-		<option value="FL">Florida</option>
-		<option value="GA">Georgia</option>
-		<option value="HI">Hawaii</option>
-		<option value="ID">Idaho</option>
-		<option value="IL">Illinois</option>
-		<option value="IN">Indiana</option>
-		<option value="IA">Iowa</option>
-		<option value="KS">Kansas</option>
-		<option value="KY">Kentucky</option>
-		<option value="LA">Louisiana</option>
-		<option value="ME">Maine</option>
-		<option value="MD">Maryland</option>
-		<option value="MA">Massachusetts</option>
-		<option value="MI">Michigan</option>
-		<option value="MN">Minnesota</option>
-		<option value="MS">Mississippi</option>
-		<option value="MO">Missouri</option>
-		<option value="MT">Montana</option>
-		<option value="NE">Nebraska</option>
-		<option value="NV">Nevada</option>
-		<option value="NH">New Hampshire</option>
-		<option value="NJ">New Jersey</option>
-		<option value="NM">New Mexico</option>
-		<option value="NY">New York</option>
-		<option value="NC">North Carolina</option>
-		<option value="ND">North Dakota</option>
-		<option value="OH">Ohio</option>
-		<option value="OK">Oklahoma</option>
-		<option value="OR">Oregon</option>
-		<option value="PA">Pennsylvania</option>
-		<option value="RI">Rhode Island</option>
-		<option value="SC">South Carolina</option>
-		<option value="SD">South Dakota</option>
-		<option value="TN">Tennessee</option>
-		<option value="TX">Texas</option>
-		<option value="UT">Utah</option>
-		<option value="VT">Vermont</option>
-		<option value="VA">Virginia</option>
-		<option value="WA">Washington</option>
-		<option value="WV">West Virginia</option>
-		<option value="WI">Wisconsin</option>
-		<option value="WY">Wyoming</option>
-	</select><br>
-	Zip:
-	<input type="text" name="shipzip" id="checkoutshipzip"><br>
-
+  <!-- shipping infomation form -->
+  <h3 style="width:20%;">Shipping Information:</h3>
+  <div style="height:5px;">First Name:
+  <input type="text" name="creditcard" id="checkoutbillcard" style="position:absolute;margin-left:36px;width:150px;"></div><br>
+  <div style="height:5px;">Last Name:
+  <input type="text" name="creditcard" id="checkoutbillcard" style="position:absolute;margin-left:37px;width:150px;"></div><br>
+  <div style="height:5px;">Address:
+  <input type="text" name="creditcard" id="checkoutbillcard" style="position:absolute;margin-left:56px;width:150px;"></div><br>
+  <div style="height:5px;">City:
+  <input type="text" name="creditcard" id="checkoutbillcard" style="position:absolute;margin-left:87px;width:150px;"></div><br>
+  <div style="height:5px;">State:
+  <select name="shipstate" id="checkoutshipstate" style="position:absolute;margin-left:77px;width:154px;">
+    <option value="AL">Alabama</option>
+    <option value="AK">Alaska</option>
+    <option value="AZ">Arizona</option>
+    <option value="AR">Arkansas</option>
+    <option value="CA">California</option>
+    <option value="CO">Colorado</option>
+    <option value="CT">Connecticut</option>
+    <option value="DE">Delaware</option>
+    <option value="DC">District Of Columbia</option>
+    <option value="FL">Florida</option>
+    <option value="GA">Georgia</option>
+    <option value="HI">Hawaii</option>
+    <option value="ID">Idaho</option>
+    <option value="IL">Illinois</option>
+    <option value="IN">Indiana</option>
+    <option value="IA">Iowa</option>
+    <option value="KS">Kansas</option>
+    <option value="KY">Kentucky</option>
+    <option value="LA">Louisiana</option>
+    <option value="ME">Maine</option>
+    <option value="MD">Maryland</option>
+    <option value="MA">Massachusetts</option>
+    <option value="MI">Michigan</option>
+    <option value="MN">Minnesota</option>
+    <option value="MS">Mississippi</option>
+    <option value="MO">Missouri</option>
+    <option value="MT">Montana</option>
+    <option value="NE">Nebraska</option>
+    <option value="NV">Nevada</option>
+    <option value="NH">New Hampshire</option>
+    <option value="NJ">New Jersey</option>
+    <option value="NM">New Mexico</option>
+    <option value="NY">New York</option>
+    <option value="NC">North Carolina</option>
+    <option value="ND">North Dakota</option>
+    <option value="OH">Ohio</option>
+    <option value="OK">Oklahoma</option>
+    <option value="OR">Oregon</option>
+    <option value="PA">Pennsylvania</option>
+    <option value="RI">Rhode Island</option>
+    <option value="SC">South Carolina</option>
+    <option value="SD">South Dakota</option>
+    <option value="TN">Tennessee</option>
+    <option value="TX">Texas</option>
+    <option value="UT">Utah</option>
+    <option value="VT">Vermont</option>
+    <option value="VA">Virginia</option>
+    <option value="WA">Washington</option>
+    <option value="WV">West Virginia</option>
+    <option value="WI">Wisconsin</option>
+    <option value="WY">Wyoming</option>
+  </select></div><br>
+  <div style="height:5px;">Zip:
+  <input type="text" name="creditcard" id="checkoutbillcard" style="position:absolute;margin-left:92px;width:150px;"></div><br>
 	</form>
 </body>
