@@ -23,7 +23,7 @@ function makeProductCard($name,$price,$description,$id) {
      	 //*****   Bug 5 End  ****//
 
 	echo '" class="button" ';
-      	echo "id=product_button_$id>Configure</a>";
+      	echo "id=product_button_$id>View</a>";
       	echo "</div>";
 }
 ?>
