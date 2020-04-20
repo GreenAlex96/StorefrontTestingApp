@@ -69,7 +69,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 else {
                     // Check if user has completed their account creation. If not, send them to the finalization page
                     if ($fetchedquery["status"] == fullyverified) {
-                        // Initialize name and id cookies, then redirect user to ProductList page
+                        // Initialize name and id cookies, then redirect user to Home page
                         $idnum = $fetchedquery["id"];
 
                         $namequery = "SELECT fname FROM customer WHERE id = $idnum";
@@ -80,7 +80,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
                         setcookie("TriStorefrontUser", $idnum,time()+3600, "/");
                         $cookiecheck = "You are now logged in";
-                        echo "<script type='text/javascript'>alert('You are now logged in'); window.location = 'productList.php';</script>";
+                        echo "<script type='text/javascript'>alert('You are now logged in'); window.location = 'home.php';</script>";
                     }
                     else { // User has not fully completed account creation, so check if they have done the email verification and ask if they need to resend the email if not.
                         if ($fetchedquery["status"] == emailverified) {

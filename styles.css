@@ -27,7 +27,6 @@ img {max-width:100%;}
 .topnav a.active {
   float: left;
   color: white;
-  margin-right: 50px;
 }
 
 .topnav a.active:hover {
