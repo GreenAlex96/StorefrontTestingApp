@@ -28,7 +28,7 @@ else
 if(str_replace(" ","",$search) == "")
         $query = "SELECT * FROM product WHERE name IS NOT NULL";
 else
-        $query = "SELECT * FROM product WHERE name LIKE '%" . $search . "%'";
+        $query = "SELECT * FROM product WHERE binary name LIKE '%" . $search . "%'";
 
 // Price falls within range of user input
 $query .= " AND price >= " . $minPrice . " AND price <= " . $maxPrice;
