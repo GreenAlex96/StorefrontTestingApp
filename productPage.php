@@ -200,6 +200,24 @@
         $accounttype = 0;
         $accounttype = $result[0]["type"];
 
+        // Find all categories to be used in creating products
+        $query = "SELECT * FROM category;";
+        $statement = $connect->prepare($query);
+        $statement->execute();
+        $categories = $statement->fetchAll();
+
+        // Find all colors to be used in creating products
+        $query = "SELECT * FROM color;";
+        $statement = $connect->prepare($query);
+        $statement->execute();
+        $colors = $statement->fetchAll();
+
+        // Find all sizes to be used in creating products
+        $query = "SELECT * FROM size;";
+        $statement = $connect->prepare($query);
+        $statement->execute();
+        $sizes = $statement->fetchAll();
+
         //if user intention is to change product information
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             //if conditionals to determine if product information is being changed/applies changes
@@ -218,9 +236,35 @@
                 $sql = "UPDATE product SET sku = '$name' WHERE id = $currentId";
                 $res = mysqli_query($connection, $sql) or die("Could not update" . mysql_error());
             }
+            if (isset($_POST['price'])) {
+                $name = trim($_POST['price']);
+                $sql = "UPDATE product SET price = '$name' WHERE id = $currentId";
+                $res = mysqli_query($connection, $sql) or die("Could not update" . mysql_error());
+            }
+            if (isset($_POST['category'])) {
+                $name = trim($_POST['category']);
+                $sql = "UPDATE product SET category = '$name' WHERE id = $currentId";
+                $res = mysqli_query($connection, $sql) or die("Could not update" . mysql_error());
+            }
+            if (isset($_POST['inventory'])) {
+                $name = trim($_POST['inventory']);
+                $sql = "UPDATE product SET inventory = '$name' WHERE id = $currentId";
+                $res = mysqli_query($connection, $sql) or die("Could not update" . mysql_error());
+            }
+            if (isset($_POST['color'])) {
+                $name = trim($_POST['color']);
+                $sql = "UPDATE product SET color = '$name' WHERE id = $currentId";
+                $res = mysqli_query($connection, $sql) or die("Could not update" . mysql_error());
+            }
+            if (isset($_POST['size'])) {
+                $name = trim($_POST['size']);
+                $sql = "UPDATE product SET size = '$name' WHERE id = $currentId";
+                $res = mysqli_query($connection, $sql) or die("Could not update" . mysql_error());
+            }
         }
 
-        if ($accounttype == 2) echo "
+        if ($accounttype == 2) {
+            echo "
     <h4 class='form-header'> Update Product </h4>
     <form class= 'form-style-9' id = 'Product Update' action = 'productPage.php' method = 'post'>
     <input type = 'hidden' id = 'prodId' name = 'id' value = '$id'>
@@ -246,26 +290,49 @@
         <input class='field-style field-full align-none' type = 'number' id='prodDescInput' name = 'price' value = '$currentPrice'>
     </li>
     <li>
+    <label style='margin-right: 5px;'>Category:</label>
+    <div style='padding-bottom: 3%;' class='btn-group btn-group-toggle' data-toggle='buttons'>";
+            foreach ($categories as $category) {
+                echo '<label class="btn btn-primary btn-sm border border-dark">';
+                echo '<input type="radio" name="category" value=' . $category['id'] . '>' . $category["name"];
+                echo '</label>';
+            }
+            echo "
+    </div>
+    </li>
+    <li>
         <div class='form-group form-check-inline'>
         <label style='margin-right: 3%;'>Stock:</label>
         <input class='field-style field-full align-none' type = 'number' id='prodInvInput' name = 'inventory' value = '$currentInventory'>
     </li>
     <li>
-        <div class='form-group form-check-inline'>
-        <label style='margin-right: 3%;'>Color:</label>
-        <input class='field-style field-full align-none' type = 'number' id='prodColorInput' name = 'color' value = '$currentColor'>
+    <label style='margin-right: 5px;'>Color:</label>
+    <div style='padding-bottom: 3%;' class='btn-group btn-group-toggle' data-toggle='buttons'>";
+            foreach ($colors as $color) {
+                echo '<label class="btn btn-primary btn-sm border border-dark">';
+                echo '<input type="radio" name="color" value=' . $color['id'] . '>' . $color["description"];
+                echo '</label>';
+            }
+            echo "</div>
     </li>
     <li>
-        <div class='form-group form-check-inline'>
-        <label style='margin-right: 3%;'>Size:</label>
-        <input class='field-style field-full align-none' type = 'text' id='prodSizeInput' name = 'size' value = '$currentSize'>
-    </li>
+    <label style='margin-right: 5px;'>Size:</label>
+    <div style='padding-bottom: 3%;' class='btn-group btn-group-toggle' data-toggle='buttons'>";
+            foreach ($sizes as $size) {
+                echo '<label class="btn btn-primary btn-sm border border-dark">';
+                echo '<input type="radio" name="size" value=' . $size['id'] . '>' . $size["code"];
+                echo '</label>';
+            }
+            echo "
+    </div>
+</li>
     <li>
     <br>
 	<input class='btn btn-primary' type = 'submit' value = 'Update'/>
     </li>
     </ul>
     </form>";
+        }
         ?>
     </section>
 
