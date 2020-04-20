@@ -88,7 +88,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($accountstatusresult == 1) {
                 setcookie("TriStorefrontName", $fname, time()+3600, '/');
                 $accountMessage = "Account Information Successfully Added";
-                echo "<script type='text/javascript'>alert('Account Information Successfully Added!'); window.location = 'productList.php';</script>";
+                echo "<script type='text/javascript'>alert('Account Information Successfully Added!'); window.location = 'home.php';</script>";
             }
             else {
                 $accountMessage = "There was a problem adding your account information. Please try again.";
