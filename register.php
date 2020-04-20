@@ -78,7 +78,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                     <body>
 
                     <p>Please click the link below to verify your email to finish your account creation on the Trissential bug website.</p> <br>
-                    <a href="40.71.228.49/storefront/verify.php?email='.$username.'&hash='.$regHash.'">Verify your account</a>
+                    <a href="http://localhost:8080/verify.php?email='.$username.'&hash='.$regHash.'">Verify your account</a>
 
                     </body>
 
