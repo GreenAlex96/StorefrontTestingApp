@@ -46,6 +46,10 @@ $statement->execute();
 $result = $statement->fetchAll();
 $total_row = $statement->rowCount();
 
+if (!$result){
+    echo "No item";
+}
+
 // Display all matches using specially formatted function
 if($total_row > 0) {
 	foreach($result as $row){
