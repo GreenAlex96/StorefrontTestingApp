@@ -47,7 +47,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 <body>
 
                 <p>Please click the link below to reset your password</p> <br>
-                <a href="40.71.228.49/StorefrontTestingApp/verifyforgotpassword.php?email='.$username.'&hash='.$forgotHash.'">Reset Password</a>
+                <a href="http://localhost:8080/verifyforgotpassword.php?email='.$username.'&hash='.$forgotHash.'">Reset Password</a>
 
                 </body>
 
