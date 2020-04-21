@@ -78,15 +78,15 @@
   <!-- billing infomation form -->
   <div style="margin-left:10px;"><h3 style="width:20%;">Billing Information:</h3>
   <div style="height:5px;">First Name:
-  <input type="text" name="creditcard" id="checkoutbillcard" style="position:absolute;margin-left:36px;width:150px;"></div><br>
+  <input type="text" name="firstname" id="checkoutfirstname" style="position:absolute;margin-left:36px;width:150px;"></div><br>
   <div style="height:5px;">Last Name:
-  <input type="text" name="creditcard" id="checkoutbillcard" style="position:absolute;margin-left:37px;width:150px;"></div><br>
+  <input type="text" name="lastname" id="checkoutfirstname" style="position:absolute;margin-left:37px;width:150px;"></div><br>
   <div style="height:5px;">Address:
-  <input type="text" name="creditcard" id="checkoutbillcard" style="position:absolute;margin-left:56px;width:150px;"></div><br>
+  <input type="text" name="address" id="checkoutaddress" style="position:absolute;margin-left:56px;width:150px;"></div><br>
   <div style="height:5px;">City:
-  <input type="text" name="creditcard" id="checkoutbillcard" style="position:absolute;margin-left:87px;width:150px;"></div><br>
+  <input type="text" name="city" id="checkoutcity" style="position:absolute;margin-left:87px;width:150px;"></div><br>
   <div style="height:5px;">State:
-  <select name="shipstate" id="checkoutshipstate" style="position:absolute;margin-left:77px;width:154px;">
+  <select name="state" id="checkoutstate" style="position:absolute;margin-left:77px;width:154px;">
     <option value="AL">Alabama</option>
     <option value="AK">Alaska</option>
     <option value="AZ">Arizona</option>
@@ -140,7 +140,7 @@
     <option value="WY">Wyoming</option>
   </select></div><br>
   <div style="height:5px;">Zip:
-  <input type="text" name="creditcard" id="checkoutbillcard" style="position:absolute;margin-left:92px;width:150px;"></div><br><br>
+  <input type="text" name="zip" id="checkoutzip" style="position:absolute;margin-left:92px;width:150px;"></div><br><br>
   <!-- payment infomation form -->
   <h3 style="width:20%;">Payment type:</h3>
   <input type="radio" name="payment" value="credit" checked id="checkoutbillcredit"> Credit 
@@ -160,13 +160,13 @@
   <!-- shipping infomation form -->
   <h3 style="width:20%;">Shipping Information:</h3>
   <div style="height:5px;">First Name:
-  <input type="text" name="creditcard" id="checkoutbillcard" style="position:absolute;margin-left:36px;width:150px;"></div><br>
+  <input type="text" name="shipfirstname" id="checkoutshipfirstname" style="position:absolute;margin-left:36px;width:150px;"></div><br>
   <div style="height:5px;">Last Name:
-  <input type="text" name="creditcard" id="checkoutbillcard" style="position:absolute;margin-left:37px;width:150px;"></div><br>
+  <input type="text" name="shiplastname" id="checkoutshiplastname" style="position:absolute;margin-left:37px;width:150px;"></div><br>
   <div style="height:5px;">Address:
-  <input type="text" name="creditcard" id="checkoutbillcard" style="position:absolute;margin-left:56px;width:150px;"></div><br>
+  <input type="text" name="shipaddress" id="checkoutshipaddress" style="position:absolute;margin-left:56px;width:150px;"></div><br>
   <div style="height:5px;">City:
-  <input type="text" name="creditcard" id="checkoutbillcard" style="position:absolute;margin-left:87px;width:150px;"></div><br>
+  <input type="text" name="shipcity" id="checkoutshipcity" style="position:absolute;margin-left:87px;width:150px;"></div><br>
   <div style="height:5px;">State:
   <select name="shipstate" id="checkoutshipstate" style="position:absolute;margin-left:77px;width:154px;">
     <option value="AL">Alabama</option>
@@ -222,6 +222,6 @@
     <option value="WY">Wyoming</option>
   </select></div><br>
   <div style="height:5px;">Zip:
-  <input type="text" name="creditcard" id="checkoutbillcard" style="position:absolute;margin-left:92px;width:150px;"></div><br>
+  <input type="text" name="shipzip" id="checkoutshipzip" style="position:absolute;margin-left:92px;width:150px;"></div><br>
 	</form>
 </body>
